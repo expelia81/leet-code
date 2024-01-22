@@ -6,12 +6,10 @@ class MinStack {
     public static class Element {
         public int value;
         public int lastMin;
-        // public boolean result = true;
 
         public Element(int v) {
             value = v;
             lastMin = min;
-            // result = v<m;
         }
     }
 
