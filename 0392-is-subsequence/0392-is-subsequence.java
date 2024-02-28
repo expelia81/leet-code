@@ -18,8 +18,6 @@ class Solution {
         
         while(targetIndex != target.length && allIndex != all.length) {
             
-            System.out.println("targetIndex : " + targetIndex + " allIndex : " +allIndex);
-            
             if(all[allIndex].equals(target[targetIndex])){
                 targetIndex++;
                 allIndex++;
