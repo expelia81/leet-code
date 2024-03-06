@@ -1,23 +1,16 @@
 class Solution {
     public int strStr(String haystack, String needle) {
-        String[] hay = haystack.split("");
-        String[] nee = needle.split("");
-        for(int i=0;i<haystack.length()-needle.length()+1;i++) {
-            
-            boolean result = false;
-            int index = 0;
-            for(int j=i;j<i+nee.length; j++) {
-                    System.out.println(i + "-" + index);
-                if(hay[i+index].equals(nee[index])){
-                    result = true;
-                } else {
-                    result = false;
-                    index=0;
-                    break;
-                }
-                index++;
+        int haylength=haystack.length();
+        int needlelength=needle.length();
+        if(haylength<needlelength)
+            return -1;
+        for(int i=0;i<=haystack.length()-needle.length();i++){
+            int j=0;
+            while(j<needle.length() && haystack.charAt(i+j)==needle.charAt(j))
+                j++;
+            if(j==needle.length()){
+                return i;
             }
-            if(result) return i;
         }
         return -1;
     }
