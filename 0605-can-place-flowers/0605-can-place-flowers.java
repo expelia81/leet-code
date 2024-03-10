@@ -56,7 +56,7 @@ class Solution {
             result += (empty-1)/2;
         }
         
-        System.out.println(result+"");
+        // System.out.println(result+"");
         
         
         
