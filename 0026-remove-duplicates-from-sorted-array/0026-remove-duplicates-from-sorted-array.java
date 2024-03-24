@@ -1,13 +1,9 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
         Set<Integer> set = new LinkedHashSet<>();
-        int count = 0;
         for(int i : nums) {
-            if(set.contains(i)) {
-                count++;
-            } else {
-                set.add(i);
-            }
+            
+            set.add(i);
         }
         
         List<Integer> list = set.stream()
